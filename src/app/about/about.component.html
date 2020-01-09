@@ -1,0 +1,30 @@
+<p>about works!</p>
+<a routerLink="about1">About1</a>
+<a routerLink="about2">About2</a>
+<ul *ngFor="let product of products">
+<li>
+   <a routerLink="/product/{{product.id}}">{{product.name}}</a> 
+</li>
+</ul>
+ <div class="container" >
+     <div class="row" style="display: inline-flex;flex-direction: row;">
+         <div  *ngFor="let post of posts" style="flex:1 0 30%">
+                <div class="card text-white bg-danger" style="margin: 10px;">
+                  <div class="card-body">
+                    <h4 class="card-title">{{post.title}}</h4>
+                    <p class="card-text">{{post.body}}</p>
+                  </div>
+                </div>
+         </div>
+     </div>
+ </div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
